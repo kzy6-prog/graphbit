@@ -110,10 +110,6 @@ class PaperManager:
                 logging.info(f"Phase 1 complete for PDF with {len(summaries)} sections")
                 return hash_id, summaries
 
-        except Exception as e:
-            logging.error(f"Error in Phase 1 processing: {str(e)}")
-            raise
-
     def process_pdf_phase2(self, session_id: str) -> bool:
         """
         Phase 2: Process chunks and embeddings for Q&A functionality (background).
